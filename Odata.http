@@ -1,0 +1,31 @@
+###查询订单
+GET http://localhost:4004/odata/v4/order/Orders 
+
+###查询订单和明细
+GET http://localhost:4004/odata/v4/order/Orders?$expand=items
+
+###查询订单明细
+GET http://localhost:4004/odata/v4/order/OrderItems
+
+###添加订单
+POST http://localhost:4004/odata/v4/order/Orders 
+Content-Type: application/json
+
+{
+    "orderNumber": "4000000006",
+    "orderType": "NB",
+    "companyCode": "1200",
+    "purchaseOrg": "1710",
+    "purchaseGrp": "001",
+    "items":[{
+        "orderNumber": "4000000006",
+        "orderItem": 10,
+        "material": "materialtest1",
+        "plant": "2000",
+        "storageLocation": "L001",
+        "quantity": 150,
+        "unit": "PC",
+        "amount": 100,
+        "currency_code": "CNY"
+    }]
+}

@@ -1,6 +1,6 @@
-orderNumber_ID,orderItem,material,plant,storageLocation,quantity,unit,amount,currency_code
-40000000001,10,materialtest1,1000,L001,100,PC,100,CNY
-40000000001,20,materialtest2,1000,L001,200,PC,200,CNY
-40000000003,10,materialtest1,2000,L001,150,PC,100,CNY
-40000000004,10,materialtest1,3000,L001,100,PC,100,CNY
-40000000005,10,materialtest1,4000,L001,100,PC,100,CNY
+orderNumber,orderItem,material,plant,storageLocation,quantity,unit,amount,currency_code
+4000000001,10,materialtest1,1000,L001,100,PC,100,CNY
+4000000001,20,materialtest2,1000,L001,200,PC,200,CNY
+4000000003,10,materialtest1,2000,L001,150,PC,100,CNY
+4000000004,10,materialtest1,3000,L001,100,PC,100,CNY
+4000000005,10,materialtest1,4000,L001,100,PC,100,CNY
