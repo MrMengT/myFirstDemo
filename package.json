@@ -11,17 +11,24 @@
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.9.0",
-    "@cap-js/sqlite": "^1.10.0"
+    "@cap-js/sqlite": "^1.10.0",
+    "cds-launchpad-plugin": "^2.2.0"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "watch-orderdemo1": "cds watch --open orderdemo1/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
       "db": {
-          "kind": "sqlite",
-          "credentials": { "url": "db.sqlite" } 
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
       }
     }
-  }
+  },
+  "sapux": [
+    "app/orderdemo1"
+  ]
 }
