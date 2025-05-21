@@ -13,6 +13,8 @@ entity OrderHeads : cuid,managed {
     headText: String(4000);
     @odata.draft.bypass
     abapCode: String;
+    @odata.draft.bypass
+    abapErrMsg: String;
     items : Composition of many OrderItems on items.orderNumber = $self.orderNumber;
 }
 

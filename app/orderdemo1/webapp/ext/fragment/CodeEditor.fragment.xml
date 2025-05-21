@@ -4,11 +4,13 @@
 	xmlns:macros="sap.fe.macros"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:ce="sap.ui.codeeditor"
-	xmlns:semantic="sap.m.semantic">
+	xmlns:semantic="sap.m.semantic"
+	xmlns:f="sap.ui.layout.form">
 	<VBox 
 		core:require="{ handler: 'orderdemo1/ext/fragment/CodeEditor'}"
-		fitContainer="true">
-		<ce:CodeEditor
+		fitContainer="true"
+		>
+		<!-- <ce:CodeEditor
 			id="codeEditor"
 			value="{abapCode}"
 			maxLines="2000"
@@ -17,8 +19,49 @@
 			lineNumbers="true"
 			width="50%"
 			editable="{= ${ui>/editMode} === 'Editable'}"
-			/>
+			/> -->
 		
-		<!-- <Button id="myButton" text="Button" press="handler.onPress"></Button> -->
+		<f:Form id="FormDisplay480_12120Dual"
+			editable="false">
+	
+			<f:layout>
+				<f:ResponsiveGridLayout
+					columnsXL="2"
+					columnsL="2"
+					columnsM="2" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer title="ABAP Code">
+					<f:formElements>
+						<f:FormElement >
+							<!-- <f:fields> -->
+								<ce:CodeEditor
+									id="codeEditor"
+									value="{abapCode}"
+									maxLines="2000"
+									type="abap" 
+									syntaxHints="true" 
+									lineNumbers="true"
+									width="100%"
+									editable="{= ${ui>/editMode} === 'Editable'}"
+									/> 
+							<!-- </f:fields> -->
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer title="Message">
+					<f:formElements>
+						<f:FormElement>
+							<f:fields>
+								<TextArea growing="true" 
+									value="{abapErrMsg}"
+									editable="{= ${ui>/editMode} === 'Editable'}">
+								</TextArea>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
 	</VBox>
 </core:FragmentDefinition>

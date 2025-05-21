@@ -63,14 +63,8 @@
         "sap.m": {},
         "sap.ui.core": {},
         "sap.fe.templates": {},
-        "sap.ui.codeeditor": {}
-      }
-    },
-    "extensions": {
-      "sap.ui.controllerExtensions": {
-        "sap.suite.ui.generic.template.ObjectPage": {
-          "controller": "orderdemo1.ext.controller.ObjectPageExt"
-        }
+        "sap.ui.codeeditor": {},
+        "sap.ui.layout": {}
       }
     },
     "contentDensities": {
