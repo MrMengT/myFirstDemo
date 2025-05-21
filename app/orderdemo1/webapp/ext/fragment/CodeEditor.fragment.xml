@@ -36,6 +36,7 @@
 						<f:FormElement >
 							<!-- <f:fields> -->
 								<ce:CodeEditor
+								    class="myCodeEditor"
 									id="codeEditor"
 									value="{abapCode}"
 									maxLines="2000"
