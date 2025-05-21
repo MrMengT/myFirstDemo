@@ -1,0 +1,24 @@
+<core:FragmentDefinition 
+	xmlns:core="sap.ui.core" 
+	xmlns="sap.m" 
+	xmlns:macros="sap.fe.macros"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:ce="sap.ui.codeeditor"
+	xmlns:semantic="sap.m.semantic">
+	<VBox 
+		core:require="{ handler: 'orderdemo1/ext/fragment/CodeEditor'}"
+		fitContainer="true">
+		<ce:CodeEditor
+			id="codeEditor"
+			value="{abapCode}"
+			maxLines="2000"
+			type="abap" 
+			syntaxHints="true" 
+			lineNumbers="true"
+			width="50%"
+			editable="{= ${ui>/editMode} === 'Editable'}"
+			/>
+		
+		<!-- <Button id="myButton" text="Button" press="handler.onPress"></Button> -->
+	</VBox>
+</core:FragmentDefinition>

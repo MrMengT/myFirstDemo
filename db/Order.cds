@@ -9,7 +9,10 @@ entity OrderHeads : cuid,managed {
     companyCode : String(4);
     purchaseOrg : String(4);
     purchaseGrp : String(3);
-    headText: String(40);
+    @UI.MultiLineText
+    headText: String(4000);
+    @odata.draft.bypass
+    abapCode: String;
     items : Composition of many OrderItems on items.orderNumber = $self.orderNumber;
 }
 
